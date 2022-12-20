@@ -48,7 +48,6 @@ export default {
             const compChoice = this.getCompChoice();
             const winner = this.getWinner(userChoice, compChoice);
             this.showWinner(winner);
-            console.log(userChoice, compChoice);
         },
         getCompChoice() {
             const choices = ["r", "p", "s"];
