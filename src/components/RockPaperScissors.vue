@@ -61,26 +61,26 @@ export default {
                 return "draw";
             } else if (userChoice === "r") {
                 if (compChoice === "s") {
-                    this.resultDiv = "You win!";
+                    this.resultDiv = `${this.convertToWord(userChoice)} beats ${this.convertToWord(compChoice)}. You win!`;
                     return "user";
                 } else {
-                    this.resultDiv = "You lose.";
+                    this.resultDiv = `${this.convertToWord(compChoice)} beats ${this.convertToWord(userChoice)}. You lose.`;
                     return "comp";
                 }
             } else if (userChoice === 'p') {
                 if (compChoice === 'r') {
-                    this.resultDiv = "You win!";
+                    this.resultDiv = `${this.convertToWord(userChoice)} beats ${this.convertToWord(compChoice)}. You win!`;
                     return "user";
                 } else {
-                    this.resultDiv = "You lose.";
+                    this.resultDiv = `${this.convertToWord(compChoice)} beats ${this.convertToWord(userChoice)}. You lose.`;
                     return "comp";
                 }
             } else if (userChoice === 's') {
                 if (compChoice === 'p') {
-                    this.resultDiv = "You win!";
+                    this.resultDiv = `${this.convertToWord(userChoice)} beats ${this.convertToWord(compChoice)}. You win!`;
                     return "user";
                 } else {
-                    this.resultDiv = "You lose.";
+                    this.resultDiv = `${this.convertToWord(compChoice)} beats ${this.convertToWord(userChoice)}. You lose.`;
                     return "comp";
                 }
             }
@@ -92,6 +92,11 @@ export default {
                 this.compScore++;
             }
         },
+        convertToWord(letter) {
+        if (letter === "r") return "Rock";
+        if (letter === "p") return "Paper";
+        return "Scissors";
+}
     }
 };
 </script>
