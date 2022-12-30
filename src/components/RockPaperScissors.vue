@@ -95,7 +95,7 @@ export default {
         if (letter === "r") return "Rock";
         if (letter === "p") return "Paper";
         return "Scissors";
-}
+        }
     }
 };
 </script>
