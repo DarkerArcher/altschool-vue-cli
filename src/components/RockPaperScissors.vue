@@ -25,11 +25,17 @@
     </div>
 
     <p id="action-message">Make your move.</p>
+
+    <div>
+        <footer class="attribution">
+            <p>Click <router-link to="/about">here</router-link> for more details.</p>
+        </footer>
+    </div>
 </template>
 
 <script>
 export default {
-    name: "myVueApp",
+    name: "RockPaperScissors",
     data() {
         return {
             userScore: 0,
@@ -92,16 +98,15 @@ export default {
             }
         },
         convertToWord(letter) {
-        if (letter === "r") return "Rock";
-        if (letter === "p") return "Paper";
-        return "Scissors";
+            if (letter === "r") return "Rock";
+            if (letter === "p") return "Paper";
+            return "Scissors";
         }
     }
 };
 </script>
 
 <style>
-
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 * {
@@ -236,5 +241,12 @@ header>h1 {
 .grey-glow {
     border: rgb(104, 98, 98);
     box-shadow: rgb(114, 99, 99);
+}
+
+.attribution {
+    margin: 50px auto;
+    width: 50%;
+    padding-top: 50px;
+    text-align: center;
 }
 </style>

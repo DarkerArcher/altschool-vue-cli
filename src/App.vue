@@ -1,16 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <RockPaperScissors/>
+  <RouterView>
+  </RouterView>
 </template>
 
 <script>
-import RockPaperScissors from './components/RockPaperScissors.vue';
 
 export default {
   name: 'App',
   components: {
-    RockPaperScissors
-}
+  }
 }
 </script>
 
@@ -20,7 +18,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #a7a9be;
   margin-top: 60px;
 }
 </style>
